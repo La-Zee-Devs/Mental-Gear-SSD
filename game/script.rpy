@@ -26,10 +26,13 @@ label start:
     ## Intro Dpmon
     show dpmon lobster
     dev_dpmon "Hello! I'm Dpmon (aka Lobowoster)!"
+    hide dpmon lobster
 
     ## Intro EvaFG
     show evafg cat
     dev_evafg "Hi! I'm EvaFG!"
+    show dpmon lobster at right
+    dev_dpmon "hoya"
 
     # This ends the game.
     return
