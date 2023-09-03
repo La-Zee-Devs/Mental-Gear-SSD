@@ -12,11 +12,33 @@ define mc = Character("Main_Character")
 
 # The game starts here.
 
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text " La-Zee Devs presents... " with dissolve
+    with Pause(1)
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "Mental Gear SSD" with dissolve
+    with Pause(1)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
+
+
 label start:
+
+    # TODO: Add scene here
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+
 
     "Text tags:"
     mc "{b}bold{/b}, {i}italic{/i}, {s}struckthrough{/s}, {u}underlined{/u}, {alpha=.5}translucent{/alpha}."
