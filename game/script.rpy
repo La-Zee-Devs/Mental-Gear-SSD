@@ -13,7 +13,7 @@ define mc = Character("Main_Character")
 # The game starts here.
 
 label start:
-
+    # Temporary
     jump test
 
 label intro:
@@ -32,6 +32,8 @@ label intro:
     show evafg cat
     dev_evafg "Hi! I'm EvaFG!"
     dev_evafg "I did all the art and sound resources!"
+
+    jump credits
 
 label test:
     
@@ -56,6 +58,8 @@ label test:
     mc "For example, this displays the [variable]."
  
     mc "Escaping: {{: {{{{,  \\: \\\\,  \': \\\', \": \\\""
+
+    return
 
 
 label credits:
