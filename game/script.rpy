@@ -1,17 +1,22 @@
-﻿# Characters
-## Main Character
-define mc = Character("[player_name]")
+﻿init:
+    # Characters
+    ## Main Character
+    define mc = Character("[player_name]")
 
-## Side characters
-define boss         = Character("Boss")
-define colleague_1  = Character("Jack")
-define colleague_2  = Character("Jane")
-define mom          = Character("Mom")
+    ## Side characters
+    define boss         = Character("Boss")
+    define colleague_1  = Character("Jack")
+    define colleague_2  = Character("Jane")
+    define mom          = Character("Mom")
 
-## Developer characters
-define dev_dpmon = Character("Dpmon")
-define dev_evafg = Character("EvaFG")
+    ## Developer characters
+    define dev_dpmon = Character("Dpmon")
+    define dev_evafg = Character("EvaFG")
 
+
+    # Variables:
+    $ kooftuks_score    = 0  
+    $ profits           = 0
 
 # Splash screen
 label splashscreen:

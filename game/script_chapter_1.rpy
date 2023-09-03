@@ -37,8 +37,39 @@ label .work_1:
     scene bg table_1
     "You make your way to your assigned desk, finding your equipment to be old - 2030s, maybe even 2020s equipment. Barely adequate for your needs."
 
+    mc "Joy."
+    "You work through the chips, discarding broken ones into the scrapheap and putting any seemingly working chips aside to inspect later."
+    "You keep going until you have quite a pile of working chips, after which you start plugging them into your provided PC"
+    "Many of them have corrupted software, so you start a new pile of chips to format, load new tech on and resell."
+    
+
     show microchip
-    mc ""
+    mc "Interesting, this chip looks like it's got a pretty sophisticated laser tag aimbot on it. Bet they got banned for hip-firing circles around the other team lol"
+    menu:
+        "R&D might get some mileage out of this, but really, it's a laser tag biochip, it's probably useless outside the arena.\nWhich pile do I put this in?"
+        
+        "R&D":
+            $ FLAG_SOLD_LASER_TAG    = False
+            $ kooftuks_score        += 1
+            $ profits               += 0
+        "Resale":
+            $ FLAG_SOLD_LASER_TAG    = True
+            $ kooftuks_score        += -1
+            $ profits               += 1
+    
+
+    mc "Hm, this one's an AI chess algorithm. Some collector'll pay top dollar for this one I bet. Resale pile it goes."
+    $ profits += 1
+
+    menu:
+        "R&D might get some mileage out of this, but really, it's a laser tag biochip, it's probably useless outside the arena.\nWhich pile do I put this in?"
+        
+        "R&D":
+            $ FLAG_SOLD_LASER_TAG = False
+        "Resale":
+            $ FLAG_SOLD_LASER_TAG = True
+    
+    
 
 label .end:
     "End of Chapter 1"
