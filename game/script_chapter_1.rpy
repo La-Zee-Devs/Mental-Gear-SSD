@@ -7,8 +7,8 @@ label .mc_intro:
     scene black
 
     mc "New assignment, huh?"
-    centered "{size=+10}Hello applicant_name,\n\nWe are pleased to offer you a role as a Microchip analyst in the new government Logistics department.\n\nYour annual salary will be paid monthly at teh rate of 15,000 Koofbucks per annum. If you make great contributions, you may be eligible to recieve an additional bonus at such a time.\n\n You agree that you are employed on an \"at-will\" basis. Your employment may be terminated by the government at any time for any reason, subject to any applicable notice policies or provisions.\n\nSincerely,\nEugene Krabs\nLogistics chair\nNew Koofling Tukstra Empire advisory board{/size}" with dissolve
-    mc "At least I'm not getting promoted to customer... {p=0.3}Time to go check this out"
+    centered "{size=+10}Hello ${{applicant_name},\n\nWe are pleased to offer you a role as a Microchip analyst in the new government Logistics department.\n\nYour annual salary will be paid monthly at teh rate of 15,000 Koofbucks per annum. If you make great contributions, you may be eligible to recieve an additional bonus at such a time.\n\n You agree that you are employed on an \"at-will\" basis. Your employment may be terminated by the government at any time for any reason, subject to any applicable notice policies or provisions.\n\nSincerely,\nEugene Krabs\nLogistics chair\nNew Koofling Tukstra Empire advisory board{/size}" with dissolve
+    mc "\"${{applicant_name}\"... Ah well, at least I'm not getting promoted to customer. I should get a good night's sleep tonight."
 
     jump .office_1
 
