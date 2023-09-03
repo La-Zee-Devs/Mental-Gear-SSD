@@ -31,5 +31,30 @@ label start:
     show evafg cat
     dev_evafg "Hi! I'm EvaFG!"
 
+
+label credits:
+
+    scene bg room
+    
+    # End Credits
+    "Credits" "Backgrounds"
+
+    scene bg bankrupt
+    "Bankrupt" "Image by Nicola Barts"
+
+    scene bg break_room
+    "Break Room" "Image by Rachel Claire"
+
+    scene bg hallway
+    "Hallway" "Image by Pixabay"
+
+    scene bg table_1
+    "Table 1" "Image by Brett Sayles"
+    
+    scene bg table_2
+    "Table 2" "Image by Karolina Grabowska"
+
+    "Thanks for playing this game!"
+
     # This ends the game.
     return
