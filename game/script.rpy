@@ -18,6 +18,18 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    "Text tags:"
+    mc "{b}bold{/b}, {i}italic{/i}, {s}struckthrough{/s}, {u}underlined{/u}, {alpha=.5}translucent{/alpha}."
+    mc "{a=https://www.renpy.org}link to a website{/a} or {a=jump:credits}jump to a label{/a}."
+    mc "{color=#0080c0}color{/color}"
+    mc "The cps tag controls text typing speed."
+    mc "It can type {cps=25}as an absolute value{/cps}"
+    mc "Or it can type relative to the default speed - {cps=*2}doubling the default speed{/cps} or {cps=*0.5}halving the default speed{/cps}."
+ 
+    # 
+    # 
+
+
     scene bg room
 
     # Intro devs
