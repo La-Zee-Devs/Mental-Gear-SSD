@@ -17,8 +17,9 @@ label .office_1:
     mc "Oh great, this is in the old building. At least it looks recently refurbished..."
 
     scene bg break_room
-    mc "Break room looks nice too, limited seating though, real subtle. \nNo coffee machine either, how do they expect me to work in these conditions?"
-    mc "I should go introduce myself to my boss first."
+    mc "Break room looks nice too. Limited seating though, real subtle."
+    mc "And to coffee machine here, how do they expect me to work in these conditions?"
+    mc "Oh well, I should go introduce myself to my boss first."
 
     scene bg hallway
     "{i}You find yourself wandering the unmarked hallways, unable to find any office that looks to be of import{/i}"
@@ -27,7 +28,7 @@ label .office_1:
     boss "Are you here to pay rent? I'm at work, shoo I'll stop by later."
     mc "I'm [player_name], I've been hired on as a Microchip analyst?"
     boss "Ah, right. After the recent acquisi- {i}Erm{/i} Governmental policy changes, we have a surplus of old microchips that we're looking to liquidate."
-    boss "Weed out the ones that we can sell off to the masses, and reserve any interesting onws for R&D. All the rest go into the scrapper."
+    boss "Weed out the ones that we can sell off to the masses, and reserve any interesting ones for R&D. All the rest go into the scrapper."
     boss "If that's all, get to work! I'm expecting prompt results!"
 
     jump .work_1
