@@ -16,13 +16,13 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text " La-Zee Devs presents... " with dissolve
+    show text " {size=40} La-Zee Devs presents... {/size} " with dissolve
     with Pause(1)
 
     hide text with dissolve
     with Pause(1)
 
-    show text "Mental Gear SSD" with dissolve
+    show text " {size=50} Mental Gear SSD {/size} " with dissolve
     with Pause(1)
 
     hide text with dissolve
