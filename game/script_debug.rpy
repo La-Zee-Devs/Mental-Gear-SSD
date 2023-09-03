@@ -2,9 +2,10 @@
 label debug:
     menu:
         "Text tags":
-            jump text_tags
+            call .text_tags
+    return
 
-label text_tags:
+label .text_tags:
     
     "Text tags:"
     "{b}bold{/b}, {i}italic{/i}, {s}struckthrough{/s}, {u}underlined{/u}, {alpha=.5}translucent{/alpha}, {color=#0080c0}color{/color}."
@@ -29,4 +30,6 @@ label text_tags:
  
     "Escaping in text:  \\: \\\\,  \': \\\',  \": \\\",  {{: {{{{,  [[: [[[["
     "Escaping in dialogue only (not text):  %%: %%%%"
+
+    return
 

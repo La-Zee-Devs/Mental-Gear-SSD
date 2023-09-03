@@ -43,7 +43,7 @@ label start:
         "Start game":
             call main
 
-        "(Debug) see text_tags":
+        "Debug":
             call debug
 
         "Credits":
@@ -55,6 +55,8 @@ label start:
 # Main
 label main:
     call chapter_1
+    call credits
+    jump end_game
 
 
 label end_game:

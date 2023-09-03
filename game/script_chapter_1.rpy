@@ -1,8 +1,13 @@
 label chapter_1:
-    call mc_intro
+    call .mc_intro
+    return
 
-label mc_intro:
+label .mc_intro:
     mc "hi and bye"
+    jump .end
 
-    jump credits 
+
+label .end:
+    "End of Chapter 1"
+    return
 
