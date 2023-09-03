@@ -59,6 +59,9 @@ label .art:
     scene bg ded
     "Ded" "Image by EvaFG"
 
+    scene microchip
+    "Microchip" "Unknown image source"
+
 
     # TODO: Assets
 
