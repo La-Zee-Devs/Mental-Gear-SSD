@@ -1,17 +1,17 @@
-﻿# The script of the game goes in this file.
+﻿# Main Character
+define mc = Character("[name]")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Side characters
+define boss         = Character("Boss")
+define colleague_1  = Character("Jack")
+define colleague_2  = Character("Jane")
+define mom          = Character("Mom")
 
 # Developer characters
 define dev_dpmon = Character("Dpmon")
 define dev_evafg = Character("EvaFG")
 
-# Main Character
-define mc = Character("Main_Character")
-
-# The game starts here.
-
+# Splash screen
 label splashscreen:
     scene black
     with Pause(1)
@@ -31,30 +31,25 @@ label splashscreen:
     return
 
 
+# Start game
 label start:
-    # Temporary
-    jump test
+    python:
+        name = renpy.input("What's your name?")
+        name = name.strip() or "Guy Shy"
+    
+    menu:
+        "Start game":
+            jump mc_intro
 
-label intro:
-    scene bg room
+        "(Debug) see text_tags":
+            jump text_tags
 
-    # Intro devs
-    "Introducing the devs"
+        "Credits":
+            jump credits
 
-    ## Intro Dpmon
-    show dpmon lobster
-    dev_dpmon "Hello! I'm Dpmon (aka Lobowoster)!"
-    dev_dpmon "I did most of the storyboarding!"
-    hide dpmon lobster
 
-    ## Intro EvaFG
-    show evafg cat
-    dev_evafg "Hi! I'm EvaFG!"
-    dev_evafg "I did all the art and sound resources!"
-
-    jump credits
-
-label test:
+# Debug
+label text_tags:
     
     "Text tags:"
     mc "{b}bold{/b}, {i}italic{/i}, {s}struckthrough{/s}, {u}underlined{/u}, {alpha=.5}translucent{/alpha}, {color=#0080c0}color{/color}."
@@ -74,28 +69,66 @@ label test:
     extend " to the next statement."
 
     $ variable = "{i}variable value{/i}"
+    mc "Interpolate variables: [variable], interpolate raw variable text without rendering text tags: [variable!q]."
     mc "For example, this displays the [variable]."
  
-    mc "Escaping: {{: {{{{,  \\: \\\\,  \': \\\', \": \\\""
+    mc "Escaping in text:  \\: \\\\,  \': \\\',  \": \\\",  {{: {{{{,  [[: [[[["
+    mc "Escaping in dialogue only (not text):  %%: %%%%"
 
     return
 
 
+# Main
+label mc_intro:
+    mc "hi and bye"
+
+    jump credits 
+
+
+
+
+# Credits
 label credits:
+    scene black
+    with Pause(1)
 
-    scene bg room
+    centered "{size=+75}{cps=8}Credits{/cps}{/size}{p=2.0}{nw}" with dissolve
+
+    menu:
+        "Skip credits?"
+
+        "Yes":
+            jump credits_final
+        "No":
+            jump credits_devs
     
-    # End Credits
-    "Credits" "Backgrounds"
+label credits_devs:
+    scene black
+    with Pause(1)
 
-    scene bg bankrupt
-    "Bankrupt" "Image by Nicola Barts"
+    centered "{size=+75}The devs{/size}{p=2.0}{nw}" with dissolve
 
-    scene bg break_room
-    "Break Room" "Image by Rachel Claire"
+    ## Intro Dpmon
+    show dpmon lobster
+    dev_dpmon "Hello! I'm Dpmon (aka Lobowoster)!"
+    dev_dpmon "I did most of the storyboarding!"
+    hide dpmon lobster
 
-    scene bg hallway
-    "Hallway" "Image by Pixabay"
+    ## Intro EvaFG
+    show evafg cat
+    dev_evafg "Hi! I'm EvaFG!"
+    dev_evafg "I did all the art and sound resources!"
+
+    jump credits_art
+
+label credits_art:
+    scene black
+    with Pause(1)
+
+    centered "{size=+75}Art resources{/size}{p=2.0}{nw}" with dissolve
+
+    # Backgrounds
+    "Backgrounds"
 
     scene bg table_1
     "Table 1" "Image by Brett Sayles"
@@ -103,7 +136,39 @@ label credits:
     scene bg table_2
     "Table 2" "Image by Karolina Grabowska"
 
+    scene bg break_room
+    "Break Room" "Image by Rachel Claire"
+
+    scene bg hallway
+    "Hallway" "Image by Pixabay"
+
+    scene bg bankrupt
+    "Bankrupt" "Image by Nicola Barts"
+
+    scene bg ded
+    "Ded" "Image by EvaFG"
+
+
+    # TODO: Assets
+
+    jump credits_music
+
+label credits_music:
+    scene black
+    with Pause(1)
+
+    centered "{size=+75}Music resources{/size}{p=2.0}{nw}" with dissolve
+
+    # TODO: Add Music resources credits
+    "TODO"
+    
+    jump credits_final
+
+label credits_final:
     "Thanks for playing this game!"
 
-    # This ends the game.
+    jump end_game
+
+
+label end_game:
     return
