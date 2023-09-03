@@ -17,7 +17,7 @@ label .office_1:
     mc "Oh great, this is in the old building. At least it looks recently refurbished..."
 
     scene bg break_room
-    mc "Break room looks nice too, limited seating though, real subtle. \nNo coffee machine either, how do they expect me to work in these conditions?"
+    mc "Break room looks nice though, limited seating, real subtle. \nNo coffee machine either, how do they expect me to work in these conditions?"
     mc "I should go introduce myself to my boss first."
 
     scene bg hallway
